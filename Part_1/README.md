@@ -80,6 +80,6 @@ To run the program, execute the following commands in the terminal:
 
 Replace <algorithm_type> with one of the following options:
 
-    - incremental
-    - convex_hull
-    - onion
+- incremental
+- convex_hull
+- onion
