@@ -69,12 +69,12 @@ Marking is a vector of n-1 marks <br>
 The conditions for pqr are checked in the conditions function, and the points are transferred from the next to the previous polygon via transfer_points (we also set a limit on the points that can be transferred, but it is rare to need).
 
 **e)** Application of incremental <br>
-e1) incrementalize-General:<br>
+*e1.* incrementalize-General:<br>
 Remove the marked points q, r, p, and q' <br>
 Apply the incremental to each polygon (from task 1:"Algorithmic Approaches to Polygon Formation: A Comparative Study of Incremental, Convex Hull, and Onion Methods") <br>
 Add qr and pq through insert_edge
 
-e2) incrementalize-Special case : 
+*e2.* incrementalize-Special case : 
 if (marking[i].p == marking[i-1].r): The sub_incremental.cpp -> incremental2 with the changed incremental algorithm and the lines in the code of the utils_sub.cpp -> incrementalize function concern ONLY a special case of a polygon where r = p, i.e., the lower hull is only three points p, r, p'. Then, in a new polygon, we start with these 3 points. Then add the lower hull of the inner points. This will be the initial polygon, and the only change in incremental2 is to accept the original polygon as an argument instead of creating a triangle. Call incremental2 with sorting: y ascending
 
 **3) ANT COLONY OPTIMIZATION**
