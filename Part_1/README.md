@@ -19,13 +19,13 @@ Incremental Algorithm:
 
 Consists of files utils.inc.hpp, utils.inc.cpp, and incremental.cpp. In the utils and its header file, there are helper functions:
 
-    ascx, descx, ascy, descy are used as the third argument in sort() to sort the points for the initialization of the incremental according to the four criteria.
+- ascx, descx, ascy, descy are used as the third argument in sort() to sort the points for the initialization of the incremental according to the four criteria.
 
-    find_vertex returns the position in the polygon where a vertex is located in the form of an integer index.
+- find_vertex returns the position in the polygon where a vertex is located in the form of an integer index.
 
-    is_visible checks the visibility of an edge from a point. It involves drawing two line segments seg1 and seg2 at the ends of the desired edge and counting the number of intersections with edges of the polygon. The implementation does not always find truly 'visible' edges but ensures that their ends are visible, allowing for potential replacement.
+- is_visible checks the visibility of an edge from a point. It involves drawing two line segments seg1 and seg2 at the ends of the desired edge and counting the number of intersections with edges of the polygon. The implementation does not always find truly 'visible' edges but ensures that their ends are visible, allowing for potential replacement.
 
-    select_edge implements the other criterion of the incremental algorithm, forming triangles and selecting the one with minimum or maximum area. With option 1, it returns a randomly selected edge from the candidates.
+- select_edge implements the other criterion of the incremental algorithm, forming triangles and selecting the one with minimum or maximum area. With option 1, it returns a randomly selected edge from the candidates.
 
 The incremental() function in incremental.cpp implements the incremental algorithm as follows:
 
