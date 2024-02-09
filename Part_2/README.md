@@ -51,7 +51,7 @@ This array stores each beneficial change. When examining each edge, we sort and 
 
 **(c)** Then calculate the energy difference of the new state and accept or reject the transition based on the Metropolis criterion e^(-ΔE/T) > R(0,1) [random positive number <1 calculated at the beginning of the algorithm]. In the initial state, the temperature is set equal to 1 and decreases by 1/L at each step, where L is given by the user.
 
-**2.2)** *SUBDIVISION***
+**2.2)** *SUBDIVISION*
 
 **(a)** General description: Subdivision does not perform either the local or global step in the code. It handles the remaining tasks that do not directly involve simulated annealing: division into individual polygons, marking of edges, application of polygonization (via incremental), and merging of polygons into one.
 
