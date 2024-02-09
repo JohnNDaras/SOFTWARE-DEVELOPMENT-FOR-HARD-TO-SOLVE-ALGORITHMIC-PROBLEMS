@@ -61,8 +61,7 @@ Function incremental2: sub_incremental.cpp
 
 **(c)** Marking: <br>
 Structure mark: <br>
-Consists of p q r (lq eventually only in checks)
-
+Consists of p q r (lq eventually only in checks) <br>
 Marking is a vector of n-1 marks <br>
 *In a polygon S[i], r is marking[i-1].r, and the left q: marking[i-1].q
 
@@ -73,7 +72,7 @@ The conditions for pqr are checked in the conditions function, and the points ar
 e1) incrementalize-General:<br>
 Remove the marked points q, r, p, and q' <br>
 Apply the incremental to each polygon (from task 1:"Algorithmic Approaches to Polygon Formation: A Comparative Study of Incremental, Convex Hull, and Onion Methods") <br>
-Add qr and pq' through insert_edge
+Add qr and pq through insert_edge
 
 e2) incrementalize-Special case : 
 if (marking[i].p == marking[i-1].r): The sub_incremental.cpp -> incremental2 with the changed incremental algorithm and the lines in the code of the utils_sub.cpp -> incrementalize function concern ONLY a special case of a polygon where r = p, i.e., the lower hull is only three points p, r, p'. Then, in a new polygon, we start with these 3 points. Then add the lower hull of the inner points. This will be the initial polygon, and the only change in incremental2 is to accept the original polygon as an argument instead of creating a triangle. Call incremental2 with sorting: y ascending
