@@ -39,14 +39,14 @@ This array stores each beneficial change. When examining each edge, we sort and 
 
 d) The changes are applied with apply_changes1. First, apply it in each iteration to the temp_p polygon (saving only the beneficial changes in T). Then, as mentioned in 'c', after going through each edge, apply the best change (taking the best changes until DA < threshold).
 
-SIMULATED ANNEALING.
+**SIMULATED ANNEALING**
 
 - Local and Global transition
 
     - Initially, select the convex hull algorithm for the initial polygonization of a point set from the 1st task. Calculate the "energy" of the initial state with the Initial_state_energy function.
 
-(b) Transition to a new state through a switch with
-i) local order change step (local_transition function) between two points in the polygonal chain without violating the simplicity of the polygonal line. For the validity check of the change, use the CGAL kd-Tree structure by searching in the bounding box according to the theory with the command tree.search(std::back_inserter(points_to_check), fib), where fib is the bounding box and points_to_check are the points within it (q and r points are excluded from points_to_check). Check if the edges, at least one end of which is inside the bounding box (excluding consecutive edges of the requested edges because the intersection occurs exactly at the end).
+    - Transition to a new state through a switch with
+          - local order change step (local_transition function) between two points in the polygonal chain without violating the simplicity of the polygonal line. For the validity check of the change, use the CGAL kd-Tree structure by searching in the bounding box according to the theory with the command tree.search(std::back_inserter(points_to_check), fib), where fib is the bounding box and points_to_check are the points within it (q and r points are excluded from points_to_check). Check if the edges, at least one end of which is inside the bounding box (excluding consecutive edges of the requested edges because the intersection occurs exactly at the end).
 ii) global order change step based on random points q, s of the chain (global_transition function). If pq, qr, and st are edges, connect points p and r, and then insert q between s and t. For the validity check of the transition, exhaustively check that the new edges do not intersect any other edge of the polygonal line (excluding consecutive edges of the requested edges because the intersection occurs exactly at the end).
 
 (c) Then calculate the energy difference of the new state and accept or reject the transition based on the Metropolis criterion e^(-ΔE/T) > R(0,1) [random positive number <1 calculated at the beginning of the algorithm]. In the initial state, the temperature is set equal to 1 and decreases by 1/L at each step, where L is given by the user.
