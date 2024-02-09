@@ -1,0 +1,102 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/con_hull.cpp
+utils_con_hull.hpp
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_con_hull.hpp
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/incremental.cpp
+utils_inc.hpp
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_inc.hpp
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/onion.cpp
+utils_onion.hpp
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_onion.hpp
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_con_hull.cpp
+utils_con_hull.hpp
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_con_hull.hpp
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_con_hull.hpp
+CGAL/Exact_predicates_inexact_constructions_kernel.h
+-
+CGAL/convex_hull_2.h
+-
+CGAL/Convex_hull_traits_adapter_2.h
+-
+CGAL/property_map.h
+-
+CGAL/array.h
+-
+CGAL/Cartesian/function_objects.h
+-
+vector
+-
+numeric
+-
+cstdlib
+-
+cstring
+-
+iostream
+-
+list
+-
+sstream
+-
+algorithm
+-
+bits/stdc++.h
+-
+iterator
+-
+set
+-
+CGAL/Line_2.h
+-
+CGAL/Segment_2.h
+-
+CGAL/Polygon_2.h
+-
+CGAL/squared_distance_2.h
+-
+CGAL/intersections.h
+-
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_inc.cpp
+utils_inc.hpp
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_inc.hpp
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_inc.hpp
+CGAL/Exact_predicates_inexact_constructions_kernel.h
+-
+CGAL/Polygon_2.h
+-
+CGAL/convex_hull_2.h
+-
+CGAL/Segment_2.h
+-
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_onion.cpp
+utils_onion.hpp
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_onion.hpp
+
+/home/kostas3000/Downloads/Project3/extra:  subdivision_improved/Project1-1900082-1800040-1600168/utils_onion.hpp
+CGAL/Exact_predicates_inexact_constructions_kernel.h
+-
+CGAL/Polygon_2.h
+-
+CGAL/convex_hull_2.h
+-
+CGAL/Convex_hull_traits_adapter_2.h
+-
+CGAL/property_map.h
+-
+fstream
+-
+

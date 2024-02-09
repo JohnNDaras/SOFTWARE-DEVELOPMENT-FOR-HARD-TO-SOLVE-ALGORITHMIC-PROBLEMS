@@ -1,0 +1,406 @@
+Size 10:
+
+
+Algorithm: local_search + incremental :
+Min score: 0.745413
+Max score: 1.82674
+Min bound: 0.393686
+Max bound: 0.884275
+
+
+
+Algorithm: local_search + convex_hull :
+Min score: 0.745413
+Max score: 1.82674
+Min bound: 0.393686
+Max bound: 0.884275
+
+
+
+Algorithm: local_search + onion :
+Min score: 0.681952
+Max score: 1.82674
+Min bound: 0.351727
+Max bound: 0.884275
+
+
+
+Algorithm: simulated_annealing + incremental :
+Min score: 1.01922
+Max score: 1.14945
+Min bound: 0.524507
+Max bound: 0.253877
+
+
+
+Algorithm: simulated_annealing + convex_hull :
+Min score: 1.01922
+Max score: 1.14945
+Min bound: 0.524507
+Max bound: 0.253877
+
+
+
+Algorithm: simulated_annealing + onion :
+Min score: 1.24738
+Max score: 1.27118
+Min bound: 0.759439
+Max bound: 0.487944
+
+
+
+Algorithm: ant_colony + no init :
+Min score: 0.994359
+Max score: 1.70282
+Min bound: 0.568609
+Max bound: 0.776461
+
+
+Size 15:
+
+
+Algorithm: local_search + incremental :
+Min score: 0.693969
+Max score: 1.72389
+Min bound: 0.394113
+Max bound: 0.847028
+
+
+
+Algorithm: local_search + convex_hull :
+Min score: 0.693969
+Max score: 1.72389
+Min bound: 0.394113
+Max bound: 0.847028
+
+
+
+Algorithm: local_search + onion :
+Min score: 0.741114
+Max score: 1.67082
+Min bound: 0.425918
+Max bound: 0.832006
+
+
+
+Algorithm: simulated_annealing + incremental :
+Min score: 1.0734
+Max score: 1.56557
+Min bound: 0.6317
+Max bound: 0.740644
+
+
+
+Algorithm: simulated_annealing + convex_hull :
+Min score: 1.0734
+Max score: 1.56557
+Min bound: 0.6317
+Max bound: 0.740644
+
+
+
+Algorithm: simulated_annealing + onion :
+Min score: 1.22406
+Max score: 1.22406
+Min bound: 0.746202
+Max bound: 0.47786
+
+
+
+Algorithm: ant_colony + no init :
+Min score: 0.832766
+Max score: 1.56564
+Min bound: 0.455378
+Max bound: 0.746617
+
+
+Size 20:
+
+
+Algorithm: local_search + incremental :
+Min score: 0.574496
+Max score: 1.72804
+Min bound: 0.329132
+Max bound: 0.817021
+
+
+
+Algorithm: local_search + convex_hull :
+Min score: 0.574496
+Max score: 1.72804
+Min bound: 0.329132
+Max bound: 0.817021
+
+
+
+Algorithm: local_search + onion :
+Min score: 0.542729
+Max score: 1.72315
+Min bound: 0.328605
+Max bound: 0.816882
+
+
+
+Algorithm: simulated_annealing + incremental :
+Min score: 0.900848
+Max score: 1.45247
+Min bound: 0.485857
+Max bound: 0.689388
+
+
+
+Algorithm: simulated_annealing + convex_hull :
+Min score: 0.900848
+Max score: 1.45247
+Min bound: 0.485857
+Max bound: 0.689388
+
+
+
+Algorithm: simulated_annealing + onion :
+Min score: 1.24912
+Max score: 1.20579
+Min bound: 0.732408
+Max bound: 0.516707
+
+
+
+Algorithm: ant_colony + no init :
+Min score: 0.712043
+Max score: 1.60514
+Min bound: 0.397731
+Max bound: 0.79445
+
+
+Size 25:
+
+
+Algorithm: local_search + incremental :
+Min score: 0.618101
+Max score: 1.69469
+Min bound: 0.344875
+Max bound: 0.807978
+
+
+
+Algorithm: local_search + convex_hull :
+Min score: 0.618101
+Max score: 1.69469
+Min bound: 0.344875
+Max bound: 0.807978
+
+
+
+Algorithm: local_search + onion :
+Min score: 0.570473
+Max score: 1.64358
+Min bound: 0.310651
+Max bound: 0.802024
+
+
+
+Algorithm: simulated_annealing + incremental :
+Min score: 0.961895
+Max score: 1.46665
+Min bound: 0.518725
+Max bound: 0.707063
+
+
+
+Algorithm: simulated_annealing + convex_hull :
+Min score: 0.961895
+Max score: 1.46665
+Min bound: 0.518725
+Max bound: 0.707063
+
+
+
+Algorithm: simulated_annealing + onion :
+Min score: 1.37545
+Max score: 1.37465
+Min bound: 0.725639
+Max bound: 0.649807
+
+
+
+Algorithm: ant_colony + no init :
+Min score: 0.708751
+Max score: 1.4652
+Min bound: 0.389824
+Max bound: 0.713245
+
+
+Size 30:
+
+
+Algorithm: local_search + incremental :
+Min score: 0.513978
+Max score: 1.75313
+Min bound: 0.265301
+Max bound: 0.876293
+
+
+
+Algorithm: local_search + convex_hull :
+Min score: 0.513978
+Max score: 1.75313
+Min bound: 0.265301
+Max bound: 0.876293
+
+
+
+Algorithm: local_search + onion :
+Min score: 0.575657
+Max score: 1.71474
+Min bound: 0.334936
+Max bound: 0.82328
+
+
+
+Algorithm: simulated_annealing + incremental :
+Min score: 0.975587
+Max score: 1.32542
+Min bound: 0.550204
+Max bound: 0.517617
+
+
+
+Algorithm: simulated_annealing + convex_hull :
+Min score: 0.975587
+Max score: 1.32542
+Min bound: 0.550204
+Max bound: 0.517617
+
+
+
+Algorithm: simulated_annealing + onion :
+Min score: 1.23204
+Max score: 1.23204
+Min bound: 0.694317
+Max bound: 0.53772
+
+
+
+Algorithm: ant_colony + no init :
+Min score: 0.823467
+Max score: 1.6359
+Min bound: 0.461923
+Max bound: 0.81039
+
+
+Size 35:
+
+
+Algorithm: local_search + incremental :
+Min score: 0.427368
+Max score: 0.299737
+Min bound: 0.234527
+Max bound: 0.117007
+
+
+
+Algorithm: local_search + convex_hull :
+Min score: 0.427368
+Max score: 0.299737
+Min bound: 0.234527
+Max bound: 0.117007
+
+
+
+Algorithm: local_search + onion :
+Min score: 0.411915
+Max score: 1.70299
+Min bound: 0.224007
+Max bound: 0.818842
+
+
+
+Algorithm: simulated_annealing + incremental :
+Min score: 0.76869
+Max score: 0.2967
+Min bound: 0.395928
+Max bound: 0.145548
+
+
+
+Algorithm: simulated_annealing + convex_hull :
+Min score: 0.76869
+Max score: 0.2967
+Min bound: 0.395928
+Max bound: 0.145548
+
+
+
+Algorithm: simulated_annealing + onion :
+Min score: 1.3599
+Max score: 1.3565
+Min bound: 0.686505
+Max bound: 0.673837
+
+
+
+Algorithm: ant_colony + no init :
+Min score: 0.631943
+Max score: 1.54225
+Min bound: 0.330345
+Max bound: 0.767329
+
+
+Size 40:
+
+
+Algorithm: local_search + incremental :
+Min score: 0.479199
+Max score: 1.73759
+Min bound: 0.255103
+Max bound: 0.851951
+
+
+
+Algorithm: local_search + convex_hull :
+Min score: 0.479199
+Max score: 1.73759
+Min bound: 0.255103
+Max bound: 0.851951
+
+
+
+Algorithm: local_search + onion :
+Min score: 0.546015
+Max score: 1.61307
+Min bound: 0.279606
+Max bound: 0.799334
+
+
+
+Algorithm: simulated_annealing + incremental :
+Min score: 0.725652
+Max score: 1.4225
+Min bound: 0.395805
+Max bound: 0.656273
+
+
+
+Algorithm: simulated_annealing + convex_hull :
+Min score: 0.725652
+Max score: 1.4225
+Min bound: 0.395805
+Max bound: 0.656273
+
+
+
+Algorithm: simulated_annealing + onion :
+Min score: 1.06352
+Max score: 1.06352
+Min bound: 0.595396
+Max bound: 0.468123
+
+
+
+Algorithm: ant_colony + no init :
+Min score: 0.699735
+Max score: 1.64208
+Min bound: 0.376725
+Max bound: 0.804945
+
+
