@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kostas3000/project2/Project1-1900082-1800040-1600168/incremental.cpp
+utils_inc.hpp
+/home/kostas3000/project2/Project1-1900082-1800040-1600168/utils_inc.hpp
+
+/home/kostas3000/project2/Project1-1900082-1800040-1600168/utils_inc.cpp
+utils_inc.hpp
+/home/kostas3000/project2/Project1-1900082-1800040-1600168/utils_inc.hpp
+
+/home/kostas3000/project2/Project1-1900082-1800040-1600168/utils_inc.hpp
+CGAL/Exact_predicates_inexact_constructions_kernel.h
+-
+CGAL/Polygon_2.h
+-
+CGAL/convex_hull_2.h
+-
+CGAL/Segment_2.h
+-
+
