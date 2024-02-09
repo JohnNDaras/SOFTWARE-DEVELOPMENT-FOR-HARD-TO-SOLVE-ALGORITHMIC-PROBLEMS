@@ -41,43 +41,42 @@ d) The changes are applied with apply_changes1. First, apply it in each iteratio
 
 **SIMULATED ANNEALING**
 
-2.1) *Local and Global transition*
+**2.1)** *Local and Global transition*
 
-(a) Initially, select the convex hull algorithm for the initial polygonization of a point set from the 1st task. Calculate the "energy" of the initial state with the Initial_state_energy function.
+**(a)** Initially, select the convex hull algorithm for the initial polygonization of a point set from the 1st task. Calculate the "energy" of the initial state with the Initial_state_energy function.
 
-(b) Transition to a new state through a switch with
-i. local order change step (local_transition function) between two points in the polygonal chain without violating the simplicity of the polygonal line. For the validity check of the change, use the CGAL kd-Tree structure by searching in the bounding box according to the theory with the command tree.search(std::back_inserter(points_to_check), fib), where fib is the bounding box and points_to_check are the points within it (q and r points are excluded from points_to_check). Check if the edges, at least one end of which is inside the bounding box (excluding consecutive edges of the requested edges because the intersection occurs exactly at the end).
+**(b)** Transition to a new state through a switch with <br>
+i. local order change step (local_transition function) between two points in the polygonal chain without violating the simplicity of the polygonal line. For the validity check of the change, use the CGAL kd-Tree structure by searching in the bounding box according to the theory with the command tree.search(std::back_inserter(points_to_check), fib), where fib is the bounding box and points_to_check are the points within it (q and r points are excluded from points_to_check). Check if the edges, at least one end of which is inside the bounding box (excluding consecutive edges of the requested edges because the intersection occurs exactly at the end). <br>
 ii. global order change step based on random points q, s of the chain (global_transition function). If pq, qr, and st are edges, connect points p and r, and then insert q between s and t. For the validity check of the transition, exhaustively check that the new edges do not intersect any other edge of the polygonal line (excluding consecutive edges of the requested edges because the intersection occurs exactly at the end).
 
-(c) Then calculate the energy difference of the new state and accept or reject the transition based on the Metropolis criterion e^(-ΔE/T) > R(0,1) [random positive number <1 calculated at the beginning of the algorithm]. In the initial state, the temperature is set equal to 1 and decreases by 1/L at each step, where L is given by the user.
+**(c)** Then calculate the energy difference of the new state and accept or reject the transition based on the Metropolis criterion e^(-ΔE/T) > R(0,1) [random positive number <1 calculated at the beginning of the algorithm]. In the initial state, the temperature is set equal to 1 and decreases by 1/L at each step, where L is given by the user.
 
-2.2) *SUBDIVISION*
+**2.2)** *SUBDIVISION***
 
-a) General description: Subdivision does not perform either the local or global step in the code. It handles the remaining tasks that do not directly involve simulated annealing: division into individual polygons, marking of edges, application of polygonization (via incremental), and merging of polygons into one.
+**(a)** General description: Subdivision does not perform either the local or global step in the code. It handles the remaining tasks that do not directly involve simulated annealing: division into individual polygons, marking of edges, application of polygonization (via incremental), and merging of polygons into one.
 
-b) Main algorithm: subdivision.cpp <br>
+**(b)** Main algorithm: subdivision.cpp <br>
 Functions used: utils_sub.cpp <br>
 Function incremental2: sub_incremental.cpp
 
-c) Marking: <br>
+**(c)** Marking: <br>
 Structure mark: <br>
 Consists of p q r (lq eventually only in checks)
 
-Marking is a vector of n-1 marks
+Marking is a vector of n-1 marks <br>
 *In a polygon S[i], r is marking[i-1].r, and the left q: marking[i-1].q
 
-d) Conditions:
+**d)** Conditions: <br>
 The conditions for pqr are checked in the conditions function, and the points are transferred from the next to the previous polygon via transfer_points (we also set a limit on the points that can be transferred, but it is rare to need).
 
-e) Application of incremental
-
-e1) incrementalize-General:
+**e)** Application of incremental <br>
+e1) incrementalize-General:<br>
 Remove the marked points q, r, p, and q'
 Apply the incremental to each polygon (from task 1:"Algorithmic Approaches to Polygon Formation: A Comparative Study of Incremental, Convex Hull, and Onion Methods")
 
 Add qr and pq' through insert_edge
 
-e2) incrementalize-Special case !!!!!! if (marking[i].p == marking[i-1].r):
+e2) incrementalize-Special case !!!!!! if (marking[i].p == marking[i-1].r): <br>
 The sub_incremental.cpp -> incremental2 with the changed incremental algorithm and the lines in the code of the utils_sub.cpp -> incrementalize function concern ONLY a special case of a polygon where r = p, i.e., the lower hull is only three points p, r, p'.
 
 Then, in a new polygon, we start with these 3 points. Then add the lower hull of the inner points. This will be the initial polygon, and the only change in incremental2 is to accept the original polygon as an argument instead of creating a triangle.
