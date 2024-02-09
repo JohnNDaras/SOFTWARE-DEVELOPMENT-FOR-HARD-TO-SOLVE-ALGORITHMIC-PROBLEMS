@@ -23,7 +23,7 @@ Implementation that examines, for each edge, for each possible path with a lengt
 a) Main algorithm: local.cpp
 Functions used: utils_local.cpp
 
-- From utils_local.hpp
+b) From utils_local.hpp
 
      typedef struct info {
      Point_2 u1;
@@ -41,9 +41,9 @@ d) The changes are applied with apply_changes1. First, apply it in each iteratio
 
 SIMULATED ANNEALING.
 
-2.1) Local and Global transition
+- Local and Global transition
 
-(a) Initially, select the convex hull algorithm for the initial polygonization of a point set from the 1st task. Calculate the "energy" of the initial state with the Initial_state_energy function.
+    - Initially, select the convex hull algorithm for the initial polygonization of a point set from the 1st task. Calculate the "energy" of the initial state with the Initial_state_energy function.
 
 (b) Transition to a new state through a switch with
 i) local order change step (local_transition function) between two points in the polygonal chain without violating the simplicity of the polygonal line. For the validity check of the change, use the CGAL kd-Tree structure by searching in the bounding box according to the theory with the command tree.search(std::back_inserter(points_to_check), fib), where fib is the bounding box and points_to_check are the points within it (q and r points are excluded from points_to_check). Check if the edges, at least one end of which is inside the bounding box (excluding consecutive edges of the requested edges because the intersection occurs exactly at the end).
