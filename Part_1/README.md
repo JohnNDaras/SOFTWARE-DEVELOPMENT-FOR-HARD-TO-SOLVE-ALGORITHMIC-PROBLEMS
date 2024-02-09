@@ -29,9 +29,9 @@ Consists of files utils.inc.hpp, utils.inc.cpp, and incremental.cpp. In the util
 
 The incremental() function in incremental.cpp implements the incremental algorithm as follows:
 
-    Sorts the points (criterion 1).
-    Initializes the polygon and convex hull as the triangle of the first 3 points and ensures that each polygon is counter-clockwise (compatible with convex_hull_2() of CGAL, which always returns in counter-clockwise order).
-    For each remaining point, it finds red edges in the convex hull using the is_visible() function and adds them to the red_edges vector. Then, it searches 'behind' these red edges by calling find_vertex for each red edge and finds where these vertices (source and target) lie on the polygonal line. It then searches for visible edges within this range using is_visible and stores them in the visible_edges vector. Finally, it selects an edge to replace based on the second criterion, adds the new point with an insert before the edge's target, calculates the new convex hull, and continues.
+- Sorts the points (criterion 1).
+- Initializes the polygon and convex hull as the triangle of the first 3 points and ensures that each polygon is counter-clockwise (compatible with convex_hull_2() of CGAL, which always returns in counter-clockwise order).
+- For each remaining point, it finds red edges in the convex hull using the is_visible() function and adds them to the red_edges vector. Then, it searches 'behind' these red edges by calling find_vertex for each red edge and finds where these vertices (source and target) lie on the polygonal line. It then searches for visible edges within this range using is_visible and stores them in the visible_edges vector. Finally, it selects an edge to replace based on the second criterion, adds the new point with an insert before the edge's target, calculates the new convex hull, and continues.
 
 Observations and Conclusions:
 The initialization, although it may have some differences in the final area (more in images than in uniform with a small sampling), these differences appear quite unpredictable and without a specific pattern. In contrast, the choice of a visible edge consistently produces predictable results. Selecting maximum area at each step gives a large final area, selecting minimum gives a small final area, while random selection tends to be somewhere in between with very rare exceptions, as expected.
