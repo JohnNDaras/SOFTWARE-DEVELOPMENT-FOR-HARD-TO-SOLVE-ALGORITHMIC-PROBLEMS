@@ -62,9 +62,7 @@ Functions from utils_onion.cpp:
 
 Functions from onion.cpp:
 
-Polygon_2 onion(Points S, int onion_initialization):
-
-General logic is briefly explained in comments. Significant point is the change in the orientation of the inner polygon (p2).
+- Polygon_2 onion(Points S, int onion_initialization): General logic is briefly explained in comments. Significant point is the change in the orientation of the inner polygon (p2).
 - Changing the orientation: Ensures that in the main loop (initially), the inner polygon (p2) has a different orientation than it had in the previous iteration. It reverses (using reverse_orientation()) only in even depths (related to starting with depth = 0 but adding the polygon 'depth 1' as stated in the assignment).
 - Update Index: After finding the visible edge (visible_edge) in p2, finds the index of the visible_edge.target(). To maintain order, connects the edge1.source() of the outer p1 to visible_edge.target() of p2 (because the orientation in p2 is now reversed).
 - index = index % p2.vertices().size();: In the loop for adding new points, ensures that when reaching the last point, the next one is the first, reading the polygon cyclically.
