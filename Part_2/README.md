@@ -32,8 +32,7 @@ b) From utils_local.hpp
      int DA; // Difference in area
      } info;
 
-(u1, u2) represent the edge, V the path, and DA the area difference
-!!!) Also define DA in local.cpp as the area difference between two consecutive polygons
+(u1, u2) represent the edge, V the path, and DA the area difference. Also we define DA in local.cpp as the area difference between two consecutive polygons.
 
 c) std::vector<info> T:
 This array stores each beneficial change. When examining each edge, we sort and apply the changes given by T[0]. In the case of max, we sort based on the largest DA difference, while, since DA is negative, in the case of min, we sort from largest to smallest.
