@@ -49,40 +49,39 @@ These steps (a, b, c) are repeated until the diff vector is empty, and all point
 Observations and Conclusions: <br>
 Selecting maximum area at each step gives a large final area, selecting minimum gives a small final area, while random selection tends to be somewhere in between with very rare exceptions, as expected. Based on sampling, the algorithm seems to give the largest area while taking the most time compared to the other two algorithms.
 
-Onion:
+
+**CONSTRUCTION OF PARALLEL CONVEX HULLS (Onion):**
 
 Consists of files utils_onion.hpp, utils_onion.cpp (with helper functions), and onion.cpp (with the main algorithm).
 
-    Functions from utils_onion.cpp:
+Functions from utils_onion.cpp:
 
-    visible(p, edge, polygon): Finds a visible edge, same as incremental→is_visible().
-    is_edge_visible: Checks if m or m+1 sees an edge (obviously containing k). Assumes the other point sees k as the closest.
-    nearest_point_index: Based on squared_distance (ready-made function), returns the position in p2 of the point closest to the edge we want to delete (k).
+- visible(p, edge, polygon): Finds a visible edge, same as incremental→is_visible().
+- is_edge_visible: Checks if m or m+1 sees an edge (obviously containing k). Assumes the other point sees k as the closest.
+- nearest_point_index: Based on squared_distance (ready-made function), returns the position in p2 of the point closest to the edge we want to delete (k).
 
-    onion.cpp:
+Functions from onion.cpp:
 
 Polygon_2 onion(Points S, int onion_initialization):
 
-General logic (briefly explained with comments, actual code includes more detailed comments):
+General logic is briefly explained in comments. Significant point is the change in the orientation of the inner polygon (p2).
+- Changing the orientation: Ensures that in the main loop (initially), the inner polygon (p2) has a different orientation than it had in the previous iteration. It reverses (using reverse_orientation()) only in even depths (related to starting with depth = 0 but adding the polygon 'depth 1' as stated in the assignment).
+- Update Index: After finding the visible edge (visible_edge) in p2, finds the index of the visible_edge.target(). To maintain order, connects the edge1.source() of the outer p1 to visible_edge.target() of p2 (because the orientation in p2 is now reversed).
+- index = index % p2.vertices().size();: In the loop for adding new points, ensures that when reaching the last point, the next one is the first, reading the polygon cyclically.
 
-    Significant point is the change in the orientation of the inner polygon (p2).
-    Changing the orientation: Ensures that in the main loop (initially), the inner polygon (p2) has a different orientation than it had in the previous iteration. It reverses (using reverse_orientation()) only in even depths (related to starting with depth = 0 but adding the polygon 'depth 1' as stated in the assignment).
-    Update Index: After finding the visible edge (visible_edge) in p2, finds the index of the visible_edge.target(). To maintain order, connects the edge1.source() of the outer p1 to visible_edge.target() of p2 (because the orientation in p2 is now reversed).
-    index = index % p2.vertices().size();: In the loop for adding new points, ensures that when reaching the last point, the next one is the first, reading the polygon cyclically.
-    The rest of the steps are covered in the comments.
 
-Conclusion:
+**Conclusion:** <br>
 All three algorithms seem to perform well and provide results according to expectations. The onion algorithm, although more complex, produces polygons with larger areas compared to the other two algorithms. The incremental and convex hull-based algorithms offer simplicity and efficiency, with the convex hull-based algorithm providing a good balance between simplicity and area optimization.
 
-Instructions for Running:
-To run the program, execute the following commands in the terminal:
+**Instructions for Running:** <br>
+- To run the program, execute the following commands in the terminal:
 
-cmake -DCGAL_DIR=/usr/lib/CGAL .
-make
-./main -i input.txt -o output.txt -a <algorithm_type>
+     cmake -DCGAL_DIR=/usr/lib/CGAL .
+     make
+     ./main -i input.txt -o output.txt -a <algorithm_type>
 
-Replace <algorithm_type> with one of the following options:
+- Replace <algorithm_type> with one of the following options:
 
-    incremental
-    convex_hull
-    onion
+    - incremental
+    - convex_hull
+    - onion
