@@ -71,7 +71,7 @@ General logic is briefly explained in comments. Significant point is the change 
 
 
 **Conclusion:** <br>
-All three algorithms seem to perform well and provide results according to expectations. The onion algorithm, although more complex, produces polygons with larger areas compared to the other two algorithms. The incremental and convex hull-based algorithms offer simplicity and efficiency, with the convex hull-based algorithm providing a good balance between simplicity and area optimization.
+All three algorithms perform well and provide results according to expectations. The onion algorithm, although more complex, produces polygons with larger areas compared to the other two algorithms. The incremental and convex hull-based algorithms offer simplicity and efficiency, with the convex hull-based algorithm providing a good balance between simplicity and area optimization.
 
 **Instructions for Running:** <br>
 - To run the program, execute the following commands in the terminal:
