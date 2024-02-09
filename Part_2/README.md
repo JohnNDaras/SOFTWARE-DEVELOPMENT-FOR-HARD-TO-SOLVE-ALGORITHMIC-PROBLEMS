@@ -24,6 +24,7 @@ a) Main algorithm: local.cpp
 Functions used: utils_local.cpp
 
 b) From utils_local.hpp
+
      typedef struct info {
      Point_2 u1;
      Point_2 u2;
