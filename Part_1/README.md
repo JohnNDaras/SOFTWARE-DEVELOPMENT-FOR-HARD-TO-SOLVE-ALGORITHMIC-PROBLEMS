@@ -6,7 +6,7 @@ Ioannis Daras - sdi1800040
 
 Georgios Tzathas - sdi1600168
 
-Compilation: 
+**Compilation:** 
 
 The files are in a directory, so the following commands are sufficient:
 
@@ -15,7 +15,7 @@ The files are in a directory, so the following commands are sufficient:
 
 The main.cpp is the main program that handles everything. Initially, it parses the command line arguments and stores them in variables. It reads from the input file, calls one of the three algorithms that return a polygon, and finally prints the results to the output file. Note that the area calculation function with the pick algorithm is commented out at the bottom of the main function to avoid interfering with the checks of the others.
 
-Incremental Algorithm:
+**Incremental Algorithm:**
 
 Consists of files utils.inc.hpp, utils.inc.cpp, and incremental.cpp. In the utils and its header file, there are helper functions:
 
@@ -36,7 +36,7 @@ The incremental() function in incremental.cpp implements the incremental algorit
 Observations and Conclusions:
 The initialization, although it may have some differences in the final area (more in images than in uniform with a small sampling), these differences appear quite unpredictable and without a specific pattern. In contrast, the choice of a visible edge consistently produces predictable results. Selecting maximum area at each step gives a large final area, selecting minimum gives a small final area, while random selection tends to be somewhere in between with very rare exceptions, as expected.
 
-Polygonization Based on Convex Hull:
+**Polygonization Based on Convex Hull:**
 
 (a) Initially calculates the convex hull and initializes the polygonal line A in the find_convex_hull function. The points of the polygonal line are stored in the chull vector, while the remaining points are stored in the diff vector.
 
@@ -46,7 +46,7 @@ Polygonization Based on Convex Hull:
 
 These steps (a, b, c) are repeated until the diff vector is empty, and all points have moved to the chull vector. Finally, the points are stored in the polygon and printed.
 
-Observations and Conclusions:
+Observations and Conclusions: <br>
 Selecting maximum area at each step gives a large final area, selecting minimum gives a small final area, while random selection tends to be somewhere in between with very rare exceptions, as expected. Based on sampling, the algorithm seems to give the largest area while taking the most time compared to the other two algorithms.
 
 Onion:
