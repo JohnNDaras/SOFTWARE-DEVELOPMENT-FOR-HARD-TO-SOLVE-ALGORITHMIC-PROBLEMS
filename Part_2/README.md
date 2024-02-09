@@ -23,7 +23,7 @@ Implementation that examines, for each edge, for each possible path with a lengt
 a) Main algorithm: local.cpp
 Functions used: utils_local.cpp
 
-b) From utils_local.hpp
+- From utils_local.hpp
 
      typedef struct info {
      Point_2 u1;
