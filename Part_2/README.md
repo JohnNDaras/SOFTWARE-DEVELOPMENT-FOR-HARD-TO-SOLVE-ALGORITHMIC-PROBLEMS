@@ -1,6 +1,6 @@
 **<p align = center>Polygon Optimization and Generation: Comprehensive Approach with Local Search, Simulated Annealing, Subdivision, and Ant Colony Optimization**
 
-Konstantinos Kitsos - 1900082
+Konstantinos Kitsos - sdi1900082
 
 Ioannis Daras - sdi1800040
 
